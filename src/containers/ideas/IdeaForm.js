@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-// import { createIdea } from '../../actions/ideaActions'
-
-// ---------------------------------------------------------------------------------
+import { createIdea } from '../../actions/ideas'
+// --------------------------------------------------------------
     class IdeaForm extends Component {
         
         state = {
@@ -62,4 +61,4 @@ import { connect } from 'react-redux'
         )
     }
 }
-export default IdeaForm
+export default connect(null, {createIdea})(IdeaForm)

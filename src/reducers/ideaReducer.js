@@ -9,6 +9,8 @@ export default (state= initState, action) => {
             return {...state, loading: true}
         case "LOAD_IDEAS":
             return {...state, loading: false, ideas: action.ideas}
+        case "ADD_IDEA":
+            return {...state, idea: action.idea}
         default:
             return state;
     }
