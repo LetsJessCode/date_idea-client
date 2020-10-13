@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
- class App extends Component {
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Home from './containers/Home'
+
+class App extends Component {
   render() {
     return (
-      <div>
-          <h3>Date Nights</h3>
-      </div>
+    <Router> 
+      <Switch> 
+        <div>
+          <Route exact path="/" component= {Home} />
+        </div>
+      </Switch>
+    </Router>
     )
   }
 }
