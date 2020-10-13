@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 
- class NavBar extends Component {
-    render() {
+ const NavBar = () => {
         return (
-        <nav> 
-            <NavLink to="/"> ❤️ Home</NavLink> <br/>
-            <NavLink to="/ideas"> ❤️ Date Nights</NavLink> <br/>
-            <NavLink to="/ideas/new"> ❤️ Create a Date</NavLink> 
-        </nav>
+            <nav> 
+                <NavLink to="/"> ❤️ Home</NavLink> <br/>
+                <NavLink to="/ideas"> ❤️ Date Nights</NavLink> <br/>
+                <NavLink to="/ideas/new"> ❤️ Create a Date</NavLink> 
+            </nav>
         ) 
     }
-}
 
 export default NavBar

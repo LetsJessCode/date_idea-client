@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 export class IdeaShow extends Component {
     render() {
         return (

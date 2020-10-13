@@ -1,11 +1,21 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Home from './containers/Home'
+
+import { connect } from 'react-redux'
+
+import Home from './components/Home'
 import IdeaForm from './containers/ideas/IdeaForm'
 import IdeaList from './containers/ideas/IdeaList'
-import IdeaShow from './containers/ideas/IdeaShow'
+import IdeaShow from './components/ideas/IdeaShow'
 import NavBar from './components/NavBar'
+import { fetchIdeas } from './actions/ideas'
+// ----------------------------------------------------------------
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchIdeas();
+  }
+
   render() {
     return (
     <Router> 
@@ -23,4 +33,4 @@ class App extends Component {
     )
   }
 }
-export default App;
+export default connect(null, {fetchIdeas})(App);
