@@ -1,1 +1,0 @@
-<h3>Date Idea and comments </h3>
