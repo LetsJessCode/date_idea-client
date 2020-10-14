@@ -12,9 +12,9 @@ export class IdeaList extends Component {
                 return (
                 <div>
                 <h3>List of Date Nights</h3>
-                <ul>
-                        { ideas }
-                </ul>
+                    <ul>
+                            { ideas }
+                    </ul>
                 </div>
             )
         }

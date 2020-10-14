@@ -11,7 +11,7 @@ import NavBar from './components/NavBar'
 import { fetchIdeas } from './actions/ideas'
 // ----------------------------------------------------------------
 class App extends Component {
-
+  
   componentDidMount() {
     this.props.fetchIdeas();
   }
