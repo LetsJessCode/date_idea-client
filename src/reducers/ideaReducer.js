@@ -1,6 +1,7 @@
 const initState = {
     loading: true,
     ideas: [],
+    comments: [],
     idea: {
         title: '',
         category: '',

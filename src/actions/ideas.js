@@ -15,7 +15,6 @@ export const createIdea = (ideaData, id, history) => {
     return(dispatch) => {
       const strongParams = {
         idea:{
-          idea_id: id,
           category: ideaData.category,
           title: ideaData.title,
           how_to: ideaData.how_to,

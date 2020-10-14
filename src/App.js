@@ -7,14 +7,19 @@ import Home from './components/Home'
 import IdeaForm from './containers/ideas/IdeaForm'
 import IdeaList from './containers/ideas/IdeaList'
 import IdeaShow from './components/ideas/IdeaShow'
+
+import CommentForm from './containers/comments/CommentForm'
 import NavBar from './components/NavBar'
+
 import { fetchIdeas } from './actions/ideas'
+
 // ----------------------------------------------------------------
 class App extends Component {
   
   componentDidMount() {
     this.props.fetchIdeas();
   }
+
 
   render() {
     return (
@@ -26,6 +31,7 @@ class App extends Component {
             <Route exact path="/ideas" component= {IdeaList} />
             <Route exact path="/ideas/new" component= {IdeaForm} />
             <Route exact path="/ideas/:id" component= {IdeaShow} />
+            <Route exact path="/ideas/:id/reviews/new" component= {CommentForm} />
             <Route render={ () => <p>Uh Oh 💔 ! you seem to have lost your way! Click home! </p> } />
          </Switch>
       </div>

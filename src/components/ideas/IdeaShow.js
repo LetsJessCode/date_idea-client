@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getIdea } from '../../actions/ideas'
+import CommentForm from '../../containers/comments/CommentForm'
 export class IdeaShow extends Component {
     
     render() {
@@ -16,8 +16,9 @@ export class IdeaShow extends Component {
             <p>Setting Up: <br/> {this.props.idea.how_to}</p>
             <hr />
             <h3>Comments</h3>
-                {/* <ReviewList />
-                <ReviewForm /> */}    
+            <hr />
+                {/* {/* <CommentList /> */}
+                <CommentForm />     
         </div>
     )}else {
         return <h4>Loading</h4>
