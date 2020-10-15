@@ -10,10 +10,17 @@ const initState = {
 const commentReducer = (state = initState, action) => {
     switch (action.type){
         case "GET_COMMENTS":
-            return {...state, comments: action.comments}
+            return {...state, 
+                loading: false, 
+                comments: action.idea.idea.comments
+            }
+            
         case "ADD_COMMENT":
-            return {...state, comment: action.comment}   
+            return {...state,
+                comment: 
+                action.idea.idea.comment,
+            }
             default:
-                return state
+               return state
         }
     }

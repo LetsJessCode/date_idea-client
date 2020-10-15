@@ -1,15 +1,6 @@
 const BASEURL = "http://localhost:3001"
 const LOADING = {type: "LOADING"}
 
-export const fetchComments = (id) => {
-    return(dispatch) => {
-
-        dispatch(LOADING);
-      fetch(BASEURL + "ideas" + id + '/comments')
-        .then(resp => resp.json())
-        .then(comments => dispatch({type: "GET_COMMENTS", comments}))  
-    }
-}
 
 export const createComment = (commentData, id, history) => {
     return(dispatch) => {
@@ -20,7 +11,7 @@ export const createComment = (commentData, id, history) => {
                 comment: commentData.comment
             }
         }
-        fetch(BASEURL + "ideas" + id + '/comments/new', {
+        fetch(`http://localhost:3001/ideas/${id}/comments/new`, {
             method: "POST",
             headers: {
                 'Accept': 'application/json',

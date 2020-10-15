@@ -7,12 +7,12 @@ export class CommentForm extends Component {
     state = {
         name: "",
         comment: "",
-        idea_id: "" 
+        idea_id: this.props.id
     }
 
     handleSubmit(e) {
         e.preventDefault();
-
+        debugger;
         const comment = {
             comment: this.state
         }
@@ -26,7 +26,6 @@ export class CommentForm extends Component {
     }
 
     render() {
-      
         return (
             <div> 
                 <form onSubmit={this.handleSubmit.bind(this)}>

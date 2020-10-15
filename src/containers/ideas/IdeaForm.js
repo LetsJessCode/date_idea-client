@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createIdea } from '../../actions/ideas'
-// --------------------------------------------------------------
+// -----------------------------------------------------------------------
     class IdeaForm extends Component {
-        
         state = {
             title: "",
             how_to: "",
             category: "",
-            items: ""
+            items: "",
+            comments: []
         }
 
          handleSubmit(e) {

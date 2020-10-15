@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import IdeaCard from '../../components/ideas/IdeaCard'
 import {connect} from 'react-redux'
-export class IdeaList extends Component {
+import { fetchIdeas } from '../../actions/ideas'
+export class IdeaList extends Component {    
         render() {
             if(this.props.loading) {
                 return <div>Romance Loading...</div>
@@ -19,9 +20,7 @@ export class IdeaList extends Component {
             )
         }
     }
-}
-
-        
+}      
 const mapStateToProps = state => {
     return {
         ideas: state.ideaReducer.ideas,
