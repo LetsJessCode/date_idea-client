@@ -12,11 +12,11 @@ export class CommentForm extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger;
+        // debugger;
         const comment = {
             comment: this.state
         }
-        this.props.createComment(comment, this.props.history)
+        this.props.createComment(comment, this.props.id)
     }
 
     handleChange = e => {
@@ -24,7 +24,6 @@ export class CommentForm extends Component {
             [e.target.name]: e.target.value
         })
     }
-
     render() {
         return (
             <div> 

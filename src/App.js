@@ -12,7 +12,6 @@ import CommentForm from './containers/comments/CommentForm'
 import NavBar from './components/NavBar'
 
 import { fetchIdeas } from './actions/ideas'
-import { fetchComments } from './actions/comments'
 // ----------------------------------------------------------------
 class App extends Component {
   

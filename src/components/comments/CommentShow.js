@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 export class CommentShow extends Component {
 
     render() {
-        // debugger;
         return  (
             this.props.comments.map(comment => {
                 return (

@@ -1,8 +1,6 @@
-const BASEURL = "http://localhost:3001"
-const LOADING = {type: "LOADING"}
+    const baseURL = "localhost:3001"
 
-
-export const createComment = (commentData, id, history) => {
+export const createComment = (commentData, id) => {
     return(dispatch) => {
         const strongParams = {
             comment: {
@@ -11,7 +9,7 @@ export const createComment = (commentData, id, history) => {
                 comment: commentData.comment
             }
         }
-        fetch(`http://localhost:3001/ideas/${id}/comments/new`, {
+        fetch(baseURL + "/comments", {
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -21,8 +19,16 @@ export const createComment = (commentData, id, history) => {
     })
     .then(resp => resp.json())
     .then(comment => {
-      dispatch({type: "ADD_COMMENT", comment})
-       history.push('/ideas/:id') 
+        if(comment.errors)
+        return dispatch({type: "CREATE_COMMENT_ERROR", errors: comment.errors})
+        else{
+            let newComment = comment.comment
+            return dispatch({type: "ADD_COMMENT", newComment})
+        }
+    })
+        .catch((errors) => {
+            console.log(errors)
+            dispatch({type: "CREATE_COMMENT_ERROR", errors})
         })
     }
 }

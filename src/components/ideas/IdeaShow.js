@@ -2,12 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import CommentForm from '../../containers/comments/CommentForm'
 import CommentShow from '../../components/comments/CommentShow'
-import { NavLink } from 'react-router-dom'
 
-export class IdeaShow extends Component {
-
-  
-    
+export class IdeaShow extends Component { 
     render() {
         if (this.props.idea) {
         console.log(this.props.idea)
@@ -22,7 +18,7 @@ export class IdeaShow extends Component {
             <hr />
             <h3>Comments</h3>
             <hr />
-               <CommentShow  comments={this.props.idea.comments}/>
+                <CommentShow  comments={this.props.idea.comments}/>
                 <CommentForm id={this.props.idea.id}/> 
              </div>        
        
@@ -31,8 +27,8 @@ export class IdeaShow extends Component {
             }
         }
     } 
+    
     const mapStateToProps = (state, props) => {
-        // this.props.ideas.find(idea => idea.id === parseInt(this.props.match.params.ideaId, 10)
         return {
             idea: state.ideaReducer.ideas.find(idea => idea.id === parseInt(props.match.params.id, 10))
         }

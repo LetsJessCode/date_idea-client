@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import IdeaCard from '../../components/ideas/IdeaCard'
 import {connect} from 'react-redux'
-import { fetchIdeas } from '../../actions/ideas'
 export class IdeaList extends Component {    
         render() {
             if(this.props.loading) {

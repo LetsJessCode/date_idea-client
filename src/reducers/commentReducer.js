@@ -4,7 +4,8 @@ const initState = {
         name: '',
         comment: '',
         idea_id: ''
-    }
+    },
+    errors: []
 }
 
 const commentReducer = (state = initState, action) => {
@@ -12,14 +13,17 @@ const commentReducer = (state = initState, action) => {
         case "GET_COMMENTS":
             return {...state, 
                 loading: false, 
-                comments: action.idea.idea.comments
-            }
-            
+                comments: action.comments
+            } 
         case "ADD_COMMENT":
             return {...state,
-                comment: 
-                action.idea.idea.comment,
-            }
+                comments: [...state.comments, action.newComment] 
+                }
+        case "CREATE_COMMENT_ERROR":
+            alert('Comment Name:' + action.errors.name)
+                return{...state,
+                    errors: action.errors
+                }
             default:
                return state
         }

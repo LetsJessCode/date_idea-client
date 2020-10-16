@@ -18,8 +18,7 @@ const initState = {
     const ideaReducer = (state = initState, action) => {
         switch(action.type) {
             case "LOADING":
-                return {...
-                    state,
+                return {...state,
                     loading: true
                 }
             case "LOAD_IDEAS":
