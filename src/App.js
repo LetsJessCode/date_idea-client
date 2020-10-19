@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import './App.css'
 import { connect } from 'react-redux'
 
 import Home from './components/Home'
@@ -12,6 +12,7 @@ import CommentForm from './containers/comments/CommentForm'
 import NavBar from './components/NavBar'
 
 import { fetchIdeas } from './actions/ideas'
+
 // ----------------------------------------------------------------
 class App extends Component {
   
@@ -23,7 +24,7 @@ class App extends Component {
   render() {
     return (
     <Router> 
-        <div>
+        <div className="app">
           <NavBar />
           <Switch> 
             <Route exact path="/" component= {Home} />
@@ -31,7 +32,7 @@ class App extends Component {
             <Route exact path="/ideas/new" component= {IdeaForm} />
             <Route exact path="/ideas/:id" component= {IdeaShow} />
             <Route exact path="/ideas/:id/comments/new" component= {CommentForm} />
-            <Route render={ () => <p>Uh Oh 💔 ! you seem to have lost your way! Click home! </p> } />
+            <Route render={ () => <p>Uh Oh! you seem to have lost your way! Click home! </p> } />
          </Switch>
       </div>
     </Router>

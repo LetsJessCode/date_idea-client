@@ -12,12 +12,9 @@ import { createIdea } from '../../actions/ideas'
         }
 
          handleSubmit(e) {
+            //  debugger;
              e.preventDefault();
-
-            const idea = {
-                idea: this.state
-            }
-            this.props.createIdea(idea, this.props.history)
+            this.props.createIdea(this.state, this.props.history)
         }
 
         handleChange = e => {
@@ -28,15 +25,14 @@ import { createIdea } from '../../actions/ideas'
 
         render() {
         return (
-            <div>
+            <div className="ideaForm">
             <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
-                        <label htmlFor="title">Title: </label>
-                        <input type="text" name="title" id="title" value={this.state.title} onChange={this.handleChange} />
-                    </div>
-                    <div>
-                        <label htmlFor="category">Category</label>
-                        <select name="category" id="category" value={this.state.category} onChange={this.handleChange} >
+                        <label  htmlFor="title">Title: </label>
+                        <input className="title" type="text" name="title" id="title" value={this.state.title} onChange={this.handleChange} />
+                    
+                        <label className="category" htmlFor="category">Category: </label>
+                        <select className="dropdown" name="category" id="category" value={this.state.category} onChange={this.handleChange} >
                             <option value=""> </option>
                             <option value="romance">Romantic</option>
                             <option value="fun">Fun</option>
@@ -45,16 +41,15 @@ import { createIdea } from '../../actions/ideas'
                             <option value="sexy">Sexy</option>
                         </select> 
                     </div>  
-                   <div>
+                   <div className="row">
                        <label htmlFor="how_to">Instructions:</label><br />
-                        <textarea name="how_to" id="how_to" cols="30" rows="5" placeholder="Tell me about your idea" value={this.state.how_to} onChange={this.handleChange} />
-                   </div>
-                   <div>
+                        <textarea className="textarea" name="how_to" id="how_to"  placeholder="Tell me about your idea" value={this.state.how_to} onChange={this.handleChange} />
+                   
                         <label htmlFor="items">Items Needed:</label><br />
-                        <textarea name="items" id="items" cols="30" rows="5" value={this.state.items} onChange={this.handleChange}/>
+                        <textarea className="list_items" name="items" id="items" value={this.state.items} onChange={this.handleChange}/>
                    </div>
                    <div>
-                       <input type="submit" value="Create Date" />
+                       <button type="submit" >Create Date</button>
                    </div> 
             </form>    
         </div>

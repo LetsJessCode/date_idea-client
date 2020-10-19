@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import CommentCard from '../../components/comments/CommentCard'
-import { fetchComments } from '../../actions/comments'
+// import { fetchComments } from '../../actions/comments'
 export class CommentList extends Component {
    
     render() {
@@ -14,7 +14,7 @@ export class CommentList extends Component {
                 return (
             <div>
                 <h3> List of Date Nights </h3>
-                    <ul>
+                    <ul className="comments_section">
                         { comments }
                     </ul>
             </div>

@@ -10,9 +10,9 @@ export class IdeaList extends Component {
                     return <IdeaCard key={i} idea={idea} />
                 })
                 return (
-                <div>
+                <div className="ideaDiv">
                 <h3>List of Date Nights</h3>
-                    <ul>
+                    <ul className="ideaList">
                             { ideas }
                     </ul>
                 </div>

@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+/* 
+--silver: #c2c1c2ff;
+--dark-purple: #42213dff;
+--dark-byzantium: #683257ff;
+--violet-crayola: #933970ff;
+--red-violet-crayola: #bd4089ff;
+--fashion-fuchsia: #f51aa4ff;
+*/
+
+
+html{
+background-color:black
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+background-color: black;
+border-radius: 5px 5px 5px 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h3{
+color: #f51aa4ff;
+font-style: italic;
+text-align: center;
+}
+
+.horizontal{
+  color:  #683257ff;  
+}
+
+h6{
+    color:#f51aa4ff;
+    font-style: italic;
+    text-align: start;   
+}
+
+/* .img1{
+image: url ('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F759208449662182776%2F&psig=AOvVaw2mNjDGWcwA8rADadexpla_&ust=1602978019215000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIiFnNykuuwCFQAAAAAdAAAAABAP');
+background-position: top ;
+background-repeat: no-repeat;
+background-size: 100px 100px;
+border-radius: 5px;
+background-color: #F4F1F0;
+color: #3B2938;
+} */
+a:link {
+    color:  #bd4089ff;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  /* visited link */
+  a:visited {
+    color:  #42213dff;
   }
-  to {
-    transform: rotate(360deg);
+  /* mouse over link */
+  a:hover {
+    color: #bd4089ff;
   }
+  /* selected link */
+  a:active {
+    color: #683257ff;
+  }
+ 
+
+
+.listIdea{
+transition: 0.3s;
+border-radius: 5px 5px 5px 5px;
+color:  #bd4089ff;
+
+font-family: cursive;
 }
+button{
+    background-color:  white;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px 10px;
+}
+.imgContainer{
+    background-repeat: no-repeat;
+    background-size: 100% 100%; /* width height */
+}
+
+.commentForm{
+    text-align: center
+}
+
+.textbox{
+    padding: 10px;
+    height: 75px;
+    outline: none;
+    border: 2px solid #42213dff;
+    border-color: #42213dff(.5,.5,.5,.5);
+    background-color: whitesmoke;
+    font-size: 16px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.name{
+    padding: 6px ;
+    width: 209px;
+    border-radius: 5px 5px 5px 5px;
+    font-family: cursive;
+    background-color: whitesmoke; 
+}
+  
+  /* Clear floats after the columns */
+  .date_list{
+    content: "";
+    display: table;
+    clear: both;
+    font-family: ;
+    color: #f51aa4ff;
+  }
+
+  .item {
+    float: left;
+    width: 50%;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 5px 5px;
+    color: #683257ff;
+  }
+
+  .nav{
+      font-style: italic;
+      color: #f51aa4ff;
+  }
+  .setup{
+    float: right;
+    width: 50%;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    text-align: center;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 5px 5px;
+    color: #683257ff;
+  }
+  .commentSec{
+      font-style: italic;
+      color: #f51aa4ff;
+  }
+  .ideaForm{
+    color: #f51aa4ff;
+    font-style: italic;
+
+  }
+  
+.title{
+    box-shadow: 8px 8px 16px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 2px, 2px, 2px, 2px;
+    background-color: #c2c1c2ff;
+  }
+  .category{
+      color: #f51aa4ff;
+      padding-right: 4px;
+      border-radius: 4px;
+
+  }
+  .dropdown{
+    /* display: none; */
+    position: absolute;
+    background-color: #c2c1c2ff;
+    min-width: 150px;
+    box-shadow: 8px 8px 16px 16px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    /* padding: 4px, 2px; */
+    color: #683257ff;
+
+  }
+  .row{
+    content: "";
+    display: flex;
+    font-family: ;
+    color: #f51aa4ff;
+  }
+.list_items{
+    color: #f51aa4ff;
+    background-color: #c2c1c2ff;
+    flex: 50%;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    color: #683257ff;
+  }
+
+  .textarea{
+    width: 50%;
+    height: 150px;
+    float: left;
+    padding: 16px;
+    flex: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #c2c1c2ff;
+    resize: none;
+  }

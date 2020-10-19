@@ -1,22 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createComment } from '../../actions/comments'
+import { createComment } from '../../actions/ideas'
 // --------------------------------------------------------------
 export class CommentForm extends Component {
     
     state = {
-        name: "",
-        comment: "",
+        name: this.props.name,
+        comment: this.props.comment,
         idea_id: this.props.id
     }
 
     handleSubmit(e) {
-        e.preventDefault();
         // debugger;
-        const comment = {
-            comment: this.state
-        }
-        this.props.createComment(comment, this.props.id)
+        e.preventDefault();
+        this.props.createComment(this.state, this.props.id)
+         console.log(this.state)
     }
 
     handleChange = e => {
@@ -24,19 +22,19 @@ export class CommentForm extends Component {
             [e.target.name]: e.target.value
         })
     }
+
     render() {
         return (
-            <div> 
+            <div className="commentForm"> 
                 <form onSubmit={this.handleSubmit.bind(this)}>
                      <h5> Leave a Comment </h5>
                     <div>
-                        <label htmlFor="name">Name: </label>
-                        <input type="text " name="name" id="name" value={this.state.name} onChange={this.handleChange}/>
+                        <input className="name" type="text" name="name" id="name" placeholder="Your Name" value={this.state.name} onChange={this.handleChange}/>
                     </div>
                     <div>
-                        <textarea cols="30" rows="5" name="comment" id="comment" value={this.state.comment} onChange={this.handleChange}/>
+                        <textarea className="textbox"  name="comment" id="comment" value={this.state.comment} onChange={this.handleChange}/>
                     </div>
-                    <input type="submit" value="Submit Comment" />
+                    <button type="submit" value="Submit Comment"> Submit Comment </button>
                 </form>
             </div>
         )

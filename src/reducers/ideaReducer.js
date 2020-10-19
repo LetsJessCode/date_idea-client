@@ -6,16 +6,12 @@ const initState = {
             category: '',
             how_to: '',
             items: '',
-        },
-        comments: [],
-        comment: {
-            name: '',
-            comment: '',
-            idea_id: ''
+            comments: []
         }
     }
 
     const ideaReducer = (state = initState, action) => {
+        
         switch(action.type) {
             case "LOADING":
                 return {...state,
@@ -42,8 +38,18 @@ const initState = {
                     loading: true
                 }
 
-                default:
+            case "ADD_COMMENT":
+                // debugger;
+                console.log('retrieved comment', action.comment)
+                let comments = [...state.idea.comments];
+                comments.push(action.ideas)
+                return {...state,
+                    // idea: {...state.idea, 
+                    // comments: [...state.idea.comments, action.comment]},
+                    reload: true
+                }
+                    default:
                     return state;
-        }     
-    }
+                }     
+            }
     export default ideaReducer

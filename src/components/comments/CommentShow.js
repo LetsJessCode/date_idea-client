@@ -8,9 +8,11 @@ export class CommentShow extends Component {
         return  (
             this.props.comments.map(comment => {
                 return (
-                <div>
-                    <h5>{comment.name}</h5>
-                    <p>{comment.comment}</p>
+                <div className="comments">
+                  <p className="comment">{comment.comment}
+                    <br/ >
+                  - {comment.name}</p>
+                <hr />
                 </div>
                 )
             })    
