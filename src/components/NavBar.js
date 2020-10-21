@@ -11,5 +11,4 @@ import { NavLink } from 'react-router-dom'
             </nav>
         ) 
     }
-
 export default NavBar

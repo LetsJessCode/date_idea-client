@@ -13,5 +13,4 @@ const CommentCard = ({comments: {idea, id, name, comment}}) => {
         </NavLink>
     )
 }
-
 export default CommentCard

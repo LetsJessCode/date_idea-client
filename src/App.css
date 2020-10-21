@@ -68,6 +68,7 @@ color:  #bd4089ff;
 
 font-family: cursive;
 }
+
 button{
     background-color:  white;
     border-radius: 5px 5px 5px 5px;
@@ -124,6 +125,7 @@ button{
   .nav{
       font-style: italic;
       color: #f51aa4ff;
+
   }
   .setup{
     float: right;

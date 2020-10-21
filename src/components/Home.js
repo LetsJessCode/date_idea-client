@@ -12,7 +12,7 @@ const Home = () => {
                         <h6 className="img4">Adventurous</h6>
                         <h6 className="img5">Sexy</h6>
                 </div>
-                <p>maybe seed in some data of reviews ?</p>
+                
             </div>
         )
     }

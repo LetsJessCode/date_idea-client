@@ -39,7 +39,6 @@ export const createIdea = (ideaData, history) => {
          
       }
   }
-  
   export const getIdea = (id) => {
       return(dispatch) => {
         fetch(BASEURL + id)
@@ -47,7 +46,6 @@ export const createIdea = (ideaData, history) => {
         .then(idea => dispatch({type: "GET_IDEA", idea}))
       }
   }
-  
   export const createComment = (comment, id) => {
     console.log(comment)
     return(dispatch) => {

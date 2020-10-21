@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import CommentForm from '../../containers/comments/CommentForm'
-import CommentShow from '../../components/comments/CommentShow'
+import CommentShow from '../comments/CommentShow'
 export class IdeaShow extends Component { 
 
     render() {
@@ -31,7 +31,6 @@ export class IdeaShow extends Component {
             }
         }
     } 
-    
     const mapStateToProps = (state, props) => {
         return {
             idea: state.ideaReducer.ideas.find

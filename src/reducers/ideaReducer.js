@@ -44,8 +44,6 @@ const initState = {
                 let comments = [...state.idea.comments];
                 comments.push(action.ideas)
                 return {...state,
-                    // idea: {...state.idea, 
-                    // comments: [...state.idea.comments, action.comment]},
                     reload: true
                 }
                     default:
