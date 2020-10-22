@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import IdeaCard from '../../components/ideas/IdeaCard'
+import IdeaCard from './IdeaNav'
 import {connect} from 'react-redux'
 export class IdeaList extends Component {    
         render() {
             if(this.props.loading) {
                 return <div>Romance Loading...</div>
             } else{ 
-                const ideas = this.props.ideas.map((idea, i) => {
-                    return <IdeaCard key={i} idea={idea} />
+                const ideas = this.props.ideas.map((idea) => {
+                    return <IdeaCard key={idea.id} idea={idea} />
                 })
                 return (
                 <div className="ideaDiv">
@@ -21,6 +21,7 @@ export class IdeaList extends Component {
     }
 }      
 const mapStateToProps = state => {
+    // debugger;
     return {
         ideas: state.ideaReducer.ideas,
         loading: state.ideaReducer.loading

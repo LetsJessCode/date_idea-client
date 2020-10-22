@@ -1,19 +1,20 @@
 const initState = {
     loading: true,
         ideas: [],
-        idea: {
-            title: '',
-            category: '',
-            how_to: '',
-            items: '',
-            comments: []
-        }
+        // idea: {
+        //     title: '',
+        //     category: '',
+        //     how_to: '',
+        //     items: '',
+        //     comments: []
+        // }
     }
 
     const ideaReducer = (state = initState, action) => {
         
         switch(action.type) {
             case "LOADING":
+                
                 return {...state,
                     loading: true
                 }

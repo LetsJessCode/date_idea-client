@@ -48,7 +48,7 @@ a:link {
   }
   /* visited link */
   a:visited {
-    color:  #42213dff;
+    color:  #c2c1c2ff;
   }
   /* mouse over link */
   a:hover {
@@ -73,6 +73,8 @@ button{
     background-color:  white;
     border-radius: 5px 5px 5px 5px;
     padding: 10px 10px;
+    font-family: cursive;
+
 }
 .imgContainer{
     background-repeat: no-repeat;
@@ -80,7 +82,9 @@ button{
 }
 
 .commentForm{
-    text-align: center
+    text-align: center;
+    font-family: cursive;
+
 }
 
 .textbox{
@@ -124,7 +128,7 @@ button{
 
   .nav{
       font-style: italic;
-      color: #f51aa4ff;
+      color: #c2c1c2ff;
 
   }
   .setup{

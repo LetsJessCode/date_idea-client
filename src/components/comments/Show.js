@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-
 // --------------------------------------------------------------------------------------
 export class CommentShow extends Component {
 
@@ -8,7 +6,7 @@ export class CommentShow extends Component {
         return  (
             this.props.comments.map(comment => {
                 return (
-                <div className="comments">
+                <div key={comment.id} className="comments">
                   <p className="comment">{comment.comment}
                     <br/ >
                   - {comment.name}</p>
@@ -19,4 +17,4 @@ export class CommentShow extends Component {
         )            
     }
 } 
- export default connect()(CommentShow)
+ export default CommentShow
