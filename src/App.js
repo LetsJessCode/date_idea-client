@@ -8,7 +8,6 @@ import IdeaForm from './components/ideas/IdeaForm'
 import IdeaList from './components/ideas/IdeaList'
 import IdeaCard from './components/ideas/IdeaCard'
 
-import CommentForm from './components/comments/Form'
 import NavBar from './components/NavBar'
 
 import { fetchIdeas } from './actions/ideas'
@@ -27,12 +26,10 @@ class App extends Component {
         <div className="app">
           <NavBar />
           <Switch> 
-            <Route exact path="/" component= {Home} />
             <Route exact path="/ideas" component= {IdeaList} />
             <Route exact path="/ideas/new" component= {IdeaForm} />
             <Route exact path="/ideas/:id" component= {IdeaCard} />
-            {/* <Route exact path="/ideas/:id/comments/new" component= {CommentForm} /> */}
-            <Route render={ () => <p>Uh Oh! you seem to have lost your way! Click home! </p> } />
+            <Route render={ () => <p>Uh Oh! you seem to have lost your way! Click 'Date Nights'! </p> } />
          </Switch>
       </div>
     </Router>

@@ -15,6 +15,7 @@ export class IdeaList extends Component {
                     <ul className="ideaList">
                             { ideas }
                     </ul>
+                   
                 </div>
             )
         }

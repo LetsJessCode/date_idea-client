@@ -59,7 +59,10 @@ a:link {
     color: #683257ff;
   }
  
-
+p{
+  color: #f51aa4ff;
+  font-style: italic;
+}
 
 .listIdea{
 transition: 0.3s;
@@ -202,3 +205,5 @@ button{
     background-color: #c2c1c2ff;
     resize: none;
   }
+
+ 
